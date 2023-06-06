@@ -4,22 +4,14 @@ layout: home
 
 hero:
   name: "zuikou.dev"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  text: "kou256のポートフォリオサイト"
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: About me
+      link: /about-me
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Projects
+      link: /projects
 
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
