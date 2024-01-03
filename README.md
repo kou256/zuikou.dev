@@ -11,3 +11,21 @@
     - `.vitepress/config.ts`: ページ構成などを設定するファイル
 - `firebase.json`: Firebaseに関する設定を記述したファイル
 - `.firebaserc`: 使用するFirebaseプロジェクトが記載されたファイル
+
+## 開発
+- Node.jsおよびnpmがインストールされていることを前提とする
+    - インストールされていない場合は[asdf](https://asdf-vm.com/guide/getting-started.html)や[Volta](https://docs.volta.sh/guide/getting-started)などを使用してインストールすることを推奨する
+- Node.js 18.18.0とnpm 9.8.1を使用して開発している
+- パッケージのインストール
+    ```shell
+    npm install
+    ```
+- 開発サーバーの起動
+    ```shell
+    npm run docs:dev
+    ```
+- 静的ページのビルド
+    ```shell
+    npm run docs:build
+    ```
+    
