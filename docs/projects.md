@@ -4,6 +4,8 @@
 ## [Bird](https://github.com/kou256/Bird)
 - FlappyBird風のゲーム
 - Defoldで作成
+- Cloudflare Pagesでデプロイ
+- プレイは[こちら](https://flying.zuikou.dev/app)
 
 ## [MazeVisualizer](https://github.com/kou256/MazeVisualizer)
 - 暇つぶしに迷路生成アルゴリズムの可視化したもの
