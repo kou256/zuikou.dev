@@ -13,19 +13,19 @@
 - `.firebaserc`: 使用するFirebaseプロジェクトが記載されたファイル
 
 ## 開発
-- Node.jsおよびnpmがインストールされていることを前提とする
+- Node.jsおよびpnpmがインストールされていることを前提とする
     - インストールされていない場合は[asdf](https://asdf-vm.com/guide/getting-started.html)や[Volta](https://docs.volta.sh/guide/getting-started)などを使用してインストールすることを推奨する
-- Node.js 18.18.0とnpm 9.8.1を使用して開発している
+- Node.js 22.17.1とpnpm 9.12.2を使用して開発している
 - パッケージのインストール
     ```shell
-    npm install
+    pnpm install
     ```
 - 開発サーバーの起動
     ```shell
-    npm run docs:dev
+    pnpm docs:dev
     ```
 - 静的ページのビルド
     ```shell
-    npm run docs:build
+    pnpm docs:build
     ```
     
