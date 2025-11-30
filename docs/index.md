@@ -4,14 +4,13 @@ layout: home
 
 hero:
   name: "zuikou.dev"
-  text: "kou256のポートフォリオサイト"
-  actions:
-    - theme: brand
-      text: About me
-      link: /about-me
-    - theme: alt
-      text: Projects
-      link: /projects
-
+      
 ---
 
+<script setup>
+import Skills from './components/Skills.vue'
+import Projects from './components/Projects.vue'
+</script>
+
+<Skills />
+<Projects />
