@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "zuikou.dev"
-      
+
 ---
 
 <script setup>

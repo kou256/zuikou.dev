@@ -42,6 +42,7 @@ const projects = [
         :key="project.title" 
         :href="project.link"
         target="_blank"
+        rel="noopener noreferrer"
         class="project-card zdk-card"
       >
         <h3 class="project-card__title">{{ project.title }}</h3>

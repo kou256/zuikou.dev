@@ -5,7 +5,7 @@ export default defineConfig({
   title: "zuikou.dev",
   description: "kou256のポートフォリオサイト",
   head: [
-    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css' }]
+    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/devicons/devicon@2.17.0/devicon.min.css' }]
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
