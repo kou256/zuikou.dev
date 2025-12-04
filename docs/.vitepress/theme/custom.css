@@ -1,0 +1,93 @@
+:root {
+  --zdk-section-max-width: 72rem;
+  --zdk-section-padding-inline: 1.5rem;
+  --zdk-section-padding-block: 4rem;
+  --zdk-section-header-gap: 3rem;
+  --zdk-section-title-size: 2.5rem;
+  --zdk-title-gradient: linear-gradient(120deg, var(--vp-c-brand-1), var(--vp-c-brand-2));
+
+  --zdk-grid-gap: 1.5rem;
+  --zdk-grid-min: 18.75rem;
+
+  --zdk-card-radius: 12px;
+  --zdk-card-padding: 1.5rem;
+  --zdk-card-border: 1px solid var(--vp-c-bg-soft);
+  --zdk-card-bg: var(--vp-c-bg-soft);
+  --zdk-card-bg-hover: var(--vp-c-bg-soft-up);
+  --zdk-card-shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.05);
+
+  --zdk-tag-radius: 999px;
+  --zdk-tag-padding-y: 0.25rem;
+  --zdk-tag-padding-x: 0.75rem;
+  --zdk-tag-bg: #e0e0e0;
+  --zdk-tag-color: #333;
+}
+
+.zdk-section {
+  padding: var(--zdk-section-padding-block) var(--zdk-section-padding-inline);
+  max-width: var(--zdk-section-max-width);
+  margin: 0 auto;
+}
+
+.zdk-section__header {
+  text-align: center;
+  margin-bottom: var(--zdk-section-header-gap);
+}
+
+.zdk-section__title {
+  font-size: var(--zdk-section-title-size);
+  font-weight: 700;
+  margin: 0 0 1rem;
+  background: var(--zdk-title-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.5;
+  padding: 0.2em 0;
+  border: none;
+}
+
+.zdk-section__subtitle {
+  margin: 0;
+  color: var(--vp-c-text-2);
+  font-size: 1.1rem;
+}
+
+.zdk-grid {
+  display: grid;
+  gap: var(--zdk-grid-gap);
+  grid-template-columns: repeat(auto-fit, minmax(var(--zdk-grid-min), 1fr));
+}
+
+.zdk-card {
+  background-color: var(--zdk-card-bg);
+  border-radius: var(--zdk-card-radius);
+  padding: var(--zdk-card-padding);
+  border: var(--zdk-card-border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.zdk-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--zdk-card-shadow-hover);
+  background-color: var(--zdk-card-bg-hover);
+}
+
+.zdk-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.zdk-tag {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--zdk-tag-bg);
+  color: var(--zdk-tag-color);
+  border-radius: var(--zdk-tag-radius);
+  padding: var(--zdk-tag-padding-y) var(--zdk-tag-padding-x);
+  font-size: 0.85rem;
+  font-weight: 500;
+}

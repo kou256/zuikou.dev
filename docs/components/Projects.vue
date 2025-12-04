@@ -31,25 +31,30 @@ const projects = [
 </script>
 
 <template>
-  <div id="projects" class="projects-container">
-    <div class="header">
-      <h2>Projects</h2>
+  <div id="projects" class="projects zdk-section">
+    <div class="projects__header zdk-section__header">
+      <h2 class="zdk-section__title">Projects</h2>
     </div>
-    
-    <div class="grid">
+
+    <div class="projects__grid zdk-grid">
       <a 
         v-for="project in projects" 
         :key="project.title" 
         :href="project.link"
         target="_blank"
-        class="card"
+        class="project-card zdk-card"
       >
-        <h3>{{ project.title }}</h3>
-        <ul>
+        <h3 class="project-card__title">{{ project.title }}</h3>
+        <ul class="project-card__list">
           <li v-for="desc in project.description" :key="desc">{{ desc }}</li>
         </ul>
-        <div class="tags">
-          <span v-for="tag in project.tags" :key="tag" class="tag">{{ tag }}</span>
+        <div class="zdk-tags project-card__tags">
+          <span
+            v-for="(tag, tagIndex) in project.tags"
+            :key="tag"
+            class="zdk-tag"
+            :class="{ 'project-card__tag--primary': tagIndex === 0 }"
+          >{{ tag }}</span>
         </div>
       </a>
     </div>
@@ -57,99 +62,41 @@ const projects = [
 </template>
 
 <style scoped>
-.projects-container {
-  padding: 4rem 1.5rem;
-  max-width: 1152px;
-  margin: 0 auto;
+.projects__grid {
+  --zdk-grid-min: 18.75rem;
 }
 
-.header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.header h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  border: none;
-  background: -webkit-linear-gradient(120deg, var(--vp-c-brand-1), var(--vp-c-brand-2));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height: 1.5;
-  padding: 0.2em 0;
-}
-
-.subtitle {
-  color: var(--vp-c-text-2);
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-
-.card {
+.project-card {
   display: flex;
   flex-direction: column;
-  background-color: var(--vp-c-bg-soft);
-  border-radius: 12px;
-  padding: 1.5rem;
-  text-decoration: none !important;
-  transition: transform 0.2s, box-shadow 0.2s;
-  border: 1px solid var(--vp-c-bg-soft);
 }
 
-.card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  background-color: var(--vp-c-bg-soft-up);
-}
-
-.card h3 {
+.project-card__title {
   color: var(--vp-c-brand-1);
   font-size: 1.25rem;
   font-weight: 600;
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
 }
 
-.card ul {
+.project-card__list {
   list-style: disc;
   padding-left: 1.2rem;
   margin: 0 0 1.5rem 0;
   color: var(--vp-c-text-1);
-  flex-grow: 1;
+  flex: 1 1 auto;
 }
 
-.card li {
+.project-card__list li {
   margin-bottom: 0.25rem;
   font-size: 0.9rem;
 }
 
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+.project-card__tags {
+  margin-top: auto;
 }
 
-.tag {
-  background-color: #e0e0e0; /* Light gray */
-  color: #333;
-  padding: 0.25rem 0.75rem;
-  border-radius: 100px;
-  font-size: 0.75rem;
-  font-weight: 500;
-}
-
-/* Specific tag colors if needed, but generic gray seems to be in the image for some, blueish for others */
-.tag:first-child {
+.project-card__tag--primary {
   background-color: #dbeafe;
   color: var(--vp-c-brand-1);
 }
-
-/* Dark mode adjustments handled by var(--vp-*) variables mostly, but fixed colors might need media queries or CSS variables if we want to be perfect. 
-   For now, I'll stick to simple colors.
-*/
 </style>
