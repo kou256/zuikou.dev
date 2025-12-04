@@ -34,7 +34,6 @@ const projects = [
   <div id="projects" class="projects-container">
     <div class="header">
       <h2>Projects</h2>
-      <p class="subtitle">とりあえずPublicにしているものだけ</p>
     </div>
     
     <div class="grid">

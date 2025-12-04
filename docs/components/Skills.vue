@@ -16,7 +16,7 @@ const skillCategories = [
   {
     title: 'Frameworks & Libraries',
     items: [
-      { name: 'Unity', icon: 'devicon-unity-original' },
+      { name: 'Unity', icon: 'devicon-unity-plain' },
       { name: 'Vue.js', icon: 'devicon-vuejs-plain' },
       { name: 'wxPython', icon: 'devicon-python-plain' },
       { name: 'OpenCV', icon: 'devicon-opencv-plain' },
