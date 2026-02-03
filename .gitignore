@@ -24,3 +24,6 @@
 /docs/.vitepress/dist/
 /node_modules/
 /.firebase/**
+
+
+.DS_Store
