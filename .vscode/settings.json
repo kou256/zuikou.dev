@@ -1,0 +1,81 @@
+{
+    "gitmoji.outputType": "emoji",
+    "gitmoji.onlyUseCustomEmoji": true,
+    "gitmoji.addCustomEmoji": [
+        {
+            "emoji": "feat: ✨",
+            "code": ":sparkles:",
+            "description": "feat: 新機能の追加"
+        },
+        {
+            "emoji": "fix: 🐛",
+            "code": ":bug:",
+            "description": "fix: バグ修正"
+        },
+        {
+            "emoji": "docs: 📝",
+            "code": ":memo:",
+            "description": "docs: ドキュメントのみの変更"
+        },
+        {
+            "emoji": "style: 💄",
+            "code": ":lipstick:",
+            "description": "style: コードの意味に影響しない変更"
+        },
+        {
+            "emoji": "refactor: ♻️",
+            "code": ":recycle:",
+            "description": "refactor: バグ修正や新機能追加以外のコード変更"
+        },
+        {
+            "emoji": "perf: ⚡️",
+            "code": ":zap:",
+            "description": "perf: パフォーマンスを改善するコード変更"
+        },
+        {
+            "emoji": "test: ✅",
+            "code": ":white_check_mark:",
+            "description": "test: 不足しているテストの追加や既存テストの修正"
+        },
+        {
+            "emoji": "chore: 🔧",
+            "code": ":wrench:",
+            "description": "chore: ビルドプロセスや補助ツールの変更"
+        },
+        {
+            "emoji": "merge: 🔀",
+            "code": ":twisted_rightwards_arrows:",
+            "description": "merge: ブランチのマージ"
+        },
+        {
+            "emoji": "remove: 🔥",
+            "code": ":fire:",
+            "description": "remove: ファイルやコードの削除"
+        },
+        {
+            "emoji": "wip: 🚧",
+            "code": ":construction:",
+            "description": "wip: 作業中の機能"
+        },
+        {
+            "emoji": "deps: ⬆️",
+            "code": ":arrow_up:",
+            "description": "deps: 依存関係の更新"
+        },
+        {
+            "emoji": "deps: ➕",
+            "code": ":heavy_plus_sign:",
+            "description": "deps: 依存関係の追加"
+        },
+        {
+            "emoji": "deps: ➖",
+            "code": ":heavy_minus_sign:",
+            "description": "deps: 依存関係の削除"
+        },
+        {
+            "emoji": "ci: 👷",
+            "code": ":construction_worker:",
+            "description": "ci: CI/CDの追加・更新"
+        }
+    ]
+}
