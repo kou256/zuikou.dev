@@ -1,0 +1,4 @@
+## 2025-05-18 - Missing Security Headers in Firebase Configuration
+**Vulnerability:** The Firebase Hosting configuration (`firebase.json`) lacked explicit HTTP security headers, leaving the application vulnerable to MIME-sniffing, clickjacking, and man-in-the-middle attacks.
+**Learning:** Default configurations for static site hosting often do not include strict security headers. While VitePress generates secure HTML, the server (hosting provider) must enforce transport security and browser behavior policies. Implementing a strict Content Security Policy (CSP) is constrained by VitePress's use of inline scripts and styles during hydration, requiring a careful approach or 'unsafe-inline' which reduces CSP effectiveness against XSS.
+**Prevention:** Always explicitly configure security headers in `firebase.json` for Firebase Hosting projects. Use tools like Mozilla Observatory to scan for missing headers.
