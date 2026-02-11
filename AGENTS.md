@@ -3,7 +3,7 @@
 ## プロジェクト構成とモジュール配置
 - `docs/` は VitePress のコンテンツと Vue コンポーネントを管理します。
 - `docs/index.md` はホームページの入口で、フロントマターとコンポーネント読み込みを含みます。
-- `docs/components/` はページで使う Vue SFC を配置します（`Projects.vue`, `Skills.vue`）。
+- `docs/components/` はページで使う Vue SFC を配置します（例: `Projects.vue`, `Skills.vue`）。
 - `docs/.vitepress/config.mts` はサイトメタデータ、ナビ、テーマ設定を定義します。
 - `docs/.vitepress/theme/index.ts` はローカルテーマのエントリです。
 - `docs/.vitepress/theme/custom.css` はローカルテーマのスタイル上書きを管理します。
