@@ -3,14 +3,13 @@
 ## プロジェクト構成とモジュール配置
 - `docs/` は VitePress のコンテンツと Vue コンポーネントを管理します。
 - `docs/index.md` はホームページの入口で、フロントマターとコンポーネント読み込みを含みます。
-- `docs/init.md` は追加ページです。
-- `docs/components/` はページで使う Vue SFC を配置します（例: `Projects.vue`, `Skills.vue`）。
+- `docs/components/` はページで使う Vue SFC を配置します（`Projects.vue`, `Skills.vue`）。
 - `docs/.vitepress/config.mts` はサイトメタデータ、ナビ、テーマ設定を定義します。
-- `docs/.vitepress/theme/` はローカルテーマの上書きを管理します。
-- `firebase.json` は Firebase Hosting の設定です。
+- `docs/.vitepress/theme/index.ts` はローカルテーマのエントリです。
+- `docs/.vitepress/theme/custom.css` はローカルテーマのスタイル上書きを管理します。
 
 ## ビルド・テスト・開発コマンド
-- `pnpm install` で依存関係をインストール（Node.js 22.17.1、pnpm 9.12.2 想定）。
+- `pnpm install` で依存関係をインストール（pnpm 9.12.2 想定）。
 - `pnpm docs:dev` でローカルの VitePress 開発サーバーを起動します。
 - `pnpm docs:build` で `docs/.vitepress/dist` に静的サイトをビルドします。
 - `pnpm docs:preview` でビルド成果物をプレビューします。
@@ -52,4 +51,3 @@
 
 ## 設定・デプロイ注意点
 - ナビゲーションやソーシャルリンク、メタデータ変更は `docs/.vitepress/config.mts` を更新します。
-- Firebase Hosting の設定は `firebase.json` にあり、デプロイ要件と整合させて更新します。
