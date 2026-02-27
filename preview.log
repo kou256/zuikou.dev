@@ -1,0 +1,5 @@
+
+> zuikou.dev@ docs:preview /app
+> vitepress preview docs "--port" "4173"
+
+Built site served at http://localhost:4173/
