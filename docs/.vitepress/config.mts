@@ -5,7 +5,13 @@ export default defineConfig({
   title: "zuikou.dev",
   description: "kou256のポートフォリオサイト",
   head: [
-    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/devicons/devicon@2.17.0/devicon.min.css' }]
+    // 🛡️ Sentinel: Added Subresource Integrity (SRI) to prevent malicious code execution if CDN is compromised
+    ['link', {
+      rel: 'stylesheet',
+      href: 'https://cdn.jsdelivr.net/gh/devicons/devicon@2.17.0/devicon.min.css',
+      integrity: 'sha384-6iv3tXABd3c9DYulXujJl8n22ahn/12f45MomxoPv6jBX4LBE4gNJjfkx5mAKIqR',
+      crossorigin: 'anonymous'
+    }]
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
