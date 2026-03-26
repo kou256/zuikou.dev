@@ -11,6 +11,7 @@ const skillCategories = [
       { name: 'Python', icon: 'devicon-python-plain' },
       { name: 'JavaScript', icon: 'devicon-javascript-plain' },
       { name: 'TypeScript', icon: 'devicon-typescript-plain' },
+      { name: 'Go', icon: 'devicon-go-plain' },
     ]
   },
   {
@@ -18,16 +19,28 @@ const skillCategories = [
     items: [
       { name: 'Unity', icon: 'devicon-unity-plain' },
       { name: 'Vue.js', icon: 'devicon-vuejs-plain' },
+      { name: 'React', icon: 'devicon-react-original' },
+      { name: 'Next.js', icon: 'devicon-nextjs-plain' },
+      { name: 'MUI', icon: 'devicon-materialui-plain' },
       { name: 'wxPython', icon: 'devicon-python-plain' },
       { name: 'OpenCV', icon: 'devicon-opencv-plain' },
     ]
   },
   {
-    title: 'Tools & Technologies',
+    title: 'Testing & UI Docs',
+    items: [
+      { name: 'Vitest', icon: 'devicon-vitest-plain' },
+      { name: 'Storybook', icon: 'devicon-storybook-plain' },
+    ]
+  },
+  {
+    title: 'Cloud & Infrastructure',
     items: [
       { name: 'Firebase', icon: 'devicon-firebase-plain' },
       { name: 'Azure', icon: 'devicon-azure-plain' },
       { name: 'AWS', icon: 'devicon-amazonwebservices-plain-wordmark' },
+      { name: 'AWS IoT', icon: 'devicon-amazonwebservices-plain-wordmark' },
+      { name: 'Terraform', icon: 'devicon-terraform-plain' },
       { name: 'Linux', icon: 'devicon-linux-plain' },
       { name: 'Ubuntu', icon: 'devicon-ubuntu-plain' },
       { name: 'Raspberry Pi', icon: 'devicon-raspberrypi-line' },
@@ -40,7 +53,7 @@ const skillCategories = [
   <div id="skills" class="skills zdk-section">
     <div class="skills__header zdk-section__header">
       <h2 class="zdk-section__title">Skills & Experience</h2>
-      <p class="zdk-section__subtitle">A brief overview of my technical abilities.</p>
+      <p class="zdk-section__subtitle">A brief overview of technologies I have used.</p>
     </div>
 
     <div class="skills__categories">
@@ -125,4 +138,3 @@ const skillCategories = [
   font-size: 1.1rem;
 }
 </style>
-
