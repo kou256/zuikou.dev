@@ -9,8 +9,6 @@
     - `about-me.md`: これまでの使用言語などを記載しているページ
     - `projects.md`: これまでに作成したプロジェクトなどについて説明しているページ
     - `.vitepress/config.ts`: ページ構成などを設定するファイル
-- `firebase.json`: Firebaseに関する設定を記述したファイル
-- `.firebaserc`: 使用するFirebaseプロジェクトが記載されたファイル
 
 ## 開発
 - Node.jsおよびpnpmがインストールされていることを前提とする
