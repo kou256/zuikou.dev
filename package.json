@@ -1,6 +1,6 @@
 {
   "name": "zuikou.dev",
-  "packageManager": "pnpm@9.12.2",
+  "packageManager": "pnpm@12.16.1",
   "devDependencies": {
     "vitepress": "^1.6.4"
   },
