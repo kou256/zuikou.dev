@@ -11,7 +11,7 @@
   },
   "pnpm": {
     "overrides": {
-      "esbuild": "^0.25.0",
+      "esbuild": "^0.28.0",
       "mdast-util-to-hast": "^13.2.1",
       "preact": "^11.0.0"
     }
