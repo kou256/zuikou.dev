@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    # kou256/template の ci.yml は main への push を対象にする。
+    # このリポジトリのデフォルトブランチは master なので、両方を対象にする。
+    branches: [master, main]
+
+# PR の連続 push では進行中の実行をキャンセルする。template の mise-ci と同じ。
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+      # mise.toml が無いので kou256/template の mise-ci は使わない。
+      # pnpm のバージョンは package.json の packageManager に従う。
+      - uses: pnpm/action-setup@v6
+      # README 記載の Node.js。package.json に engines は無い。
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22.17.1
+          cache: pnpm
+      # pnpm 12 は未承認の依存ビルドスクリプトがあると install を失敗させる。
+      # 現行の main では esbuild の postinstall が未承認で、素の pnpm install は exit 1。
+      # スクリプトは承認せず、この失敗だけ警告にする。依存のバージョンは変えない。
+      - run: pnpm install --frozen-lockfile --config.strict-dep-builds=false
+      # 実在する検証は docs:build のみ。lint / 型チェック / test の script は無い。
+      - run: pnpm docs:build
