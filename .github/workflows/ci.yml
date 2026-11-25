@@ -26,7 +26,7 @@ jobs:
       # README 記載の Node.js。package.json に engines は無い。
       - uses: actions/setup-node@v7
         with:
-          node-version: 22.17.1
+          node-version: 22.23.5
           cache: pnpm
       # pnpm 12 は未承認の依存ビルドスクリプトがあると install を失敗させる。
       # 現行の main では esbuild の postinstall が未承認で、素の pnpm install は exit 1。
